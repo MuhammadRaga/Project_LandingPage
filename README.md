@@ -1,5 +1,6 @@
 # Project_LandingPage
-BIODATA PEMBUAT PROGRAM
-Nama       : Muhammad Raga
-Pekerjaan  : Murid
+
+
+Author
+Nama       : Muhammad Raga ||
 Sekolah    : SMK Negeri
