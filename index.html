@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Form</title>
+    <style>
+       .container {
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+  background-color: #000000;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: yellow;
+  color:black;
+}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Login</h1>
+      <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" >
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" >
+
+        <input type="submit" value="Login">
+      </form>
+    </div>
+    <script>
+      const form = document.querySelector('form');
+const usernameInput = document.querySelector('#username');
+const passwordInput = document.querySelector('#password');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault(); // prevent form submission
+
+  // get input values
+  const usernameValue = usernameInput.value;
+  const passwordValue = passwordInput.value;
+
+  // check if input is empty
+  if (usernameValue === '' || passwordValue === '') {
+   
+    alert('Username or password cannot be empty');
+  } 
+  else if(usernameValue !== "admin" || passwordValue !== "admin123"){
+    alert('Username or password wrong');
+  }
+  else {
+    window.location.href = "Menu1.html";
+  }
+});
+    </script>
+  </body>
+</html>
